@@ -36,8 +36,6 @@ module.exports = {
     'unicorn/prefer-includes': 'off',
     'vue/no-v-html': 'off',
     'no-undef': 'off',
-    'vue/multi-word-component-names': ['error', {
-      'ignores': []
-    }]
+    'vue/multi-word-component-names': 0
   }
 }

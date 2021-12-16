@@ -1,8 +1,12 @@
 <template>
     <div class="app">
-        <HeaderDefault />
-        <Nuxt />
-        <FooterDefault />
+        <div class="page">
+            <div>
+                <HeaderDefault />
+                <Nuxt />
+            </div>
+            <FooterDefault />
+        </div>
     </div>
 </template>
 

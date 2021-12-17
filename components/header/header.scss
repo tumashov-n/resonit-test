@@ -1,3 +1,81 @@
+@import "~/static/css/_variables.scss";
+
 .header{
     position: relative;
+    background: #fff;
+    padding: 20px 0;
+    
+    &-info{
+        display: flex;
+        align-items: center;
+    }
+    
+    &-menu-btn{
+        margin-right: 50px;
+        width: 42px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        transition: opacity .2s ease;
+
+        &:hover{
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        &-bars{
+            position: relative;
+            width: calc(100% - 10px);
+            height: 3px;
+            background: $color-primary;
+            border-radius: 2px;
+
+            &::after,
+            &::before{
+                content: '';
+                width: 100%;
+                position: absolute;
+                background: $color-primary;
+                height: 3px;
+                border-radius: 2px;
+                left: 0;
+            }
+            &::after{
+                bottom: 10px;
+            }
+            &::before{
+                top: 10px;
+            }
+        }
+    }
+    
+    &-logo{
+        width: 212px;
+        display: block;
+
+        img{
+            display: block;
+            width: 100%;
+        }
+    }
+    
+    &-phone{
+        font-size: 14px;
+        color: $color-light;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &-link{
+            color: $color-primary;
+            font-size: 24px;
+            font-weight: 500;
+            margin-top: 2px;
+            
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+    }
 }

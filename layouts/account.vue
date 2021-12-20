@@ -2,7 +2,7 @@
     <div class="app">
         <div class="page">
             <div>
-                <HeaderDefault />
+                <HeaderAccount />
                 <Nuxt />
             </div>
             <FooterDefault />
@@ -11,12 +11,12 @@
 </template>
 
 <script>
-import HeaderDefault from '~/components/header/header.vue'
+import HeaderAccount from '~/components/header-account/header-account.vue'
 import FooterDefault from '~/components/footer/footer.vue'
 export default {
-    name: 'DefaultLayout',
+    name: 'AccountLayout',
     components: {
-        HeaderDefault, 
+        HeaderAccount, 
         FooterDefault
     }
 }

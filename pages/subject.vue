@@ -3,7 +3,6 @@
         <h1 class="h1 h1--margin-lg">
             Авторизация
         </h1>
-
         <div class="auth-form">
             <div class="form-group">
                 <div class="form-group-title">
@@ -36,7 +35,7 @@
 
 <script>
 export default {
-    name: 'LoginPage',
-    layout: 'default'
+    name: 'SubjectPage',
+    layout: 'account' 
 }
 </script>

@@ -1,87 +1,76 @@
 @import "~/static/css/_variables.scss";
 
-.header{
-    position: relative;
+.header-account{
+    display: flex;
+    align-items: center;
     background: #fff;
-    padding: 20px 0;
-    
-    &-info{
-        display: flex;
-        align-items: center;
-    }
-    
-    &-menu-btn{
-        margin-right: 50px;
-        width: 42px;
-        height: 42px;
-        display: flex;
-        align-items: center;
-        transition: opacity .2s ease;
+    height: 60px;
+    padding: 0 30px;
+    box-shadow: 4px 0 18px 0 rgba(0,0,0,0.06);
 
-        &:hover{
-            opacity: 0.8;
-            cursor: pointer;
-        }
-
-        &-bars{
-            position: relative;
-            width: calc(100% - 10px);
-            height: 3px;
-            background: $color-primary;
-            border-radius: 2px;
-
-            &::after,
-            &::before{
-                content: '';
-                width: 100%;
-                position: absolute;
-                background: $color-primary;
-                height: 3px;
-                border-radius: 2px;
-                left: 0;
-            }
-            &::after{
-                bottom: 10px;
-            }
-            &::before{
-                top: 10px;
-            }
-        }
-    }
-    
     &-logo{
-        width: 212px;
-        display: block;
+        width: 250px;
 
         img{
             display: block;
             width: 100%;
         }
     }
-    
-    &-phone{
-        font-size: 14px;
-        color: $color-light;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
 
-        &-link{
-            color: $color-primary;
-            font-size: 24px;
-            font-weight: 500;
-            margin-top: 2px;
-            
-            &:hover{
-                opacity: 0.8;
-            }
+    &-link{
+        margin-left: 50px;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 500;
+
+        &:hover{
+            opacity: 0.75;
+            cursor: pointer;
+        }
+        
+        svg{
+            margin-right: 10px;
         }
     }
 
-    &-login{
-        min-width: 305px;
+    &-user{
         display: flex;
-        justify-content: flex-end;
+        align-items: center;
+        margin-left: auto;
+        font-size: 12px;
+        font-weight: 500;
+        cursor: default;
+
+        img{
+            margin-right: 10px;
+        }
+    }
+
+    &-notify{
+        margin-left: 20px;
+
+        &:hover{
+            color: $color-secondary;
+            cursor: pointer;
+        }
+
+        svg{
+            fill: currentColor;
+        }
+    }
+
+    &-logout{   
+        margin-left: 20px;
+        cursor: pointer;
+
+        &:hover{
+            color: $color-primary;
+            cursor: pointer;
+        }
+
+        svg{
+            stroke: currentColor;
+        }
     }
 }

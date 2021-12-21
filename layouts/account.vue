@@ -1,23 +1,30 @@
 <template>
     <div class="app">
         <div class="page">
-            <div>
-                <HeaderAccount />
-                <Nuxt />
-            </div>
-            <FooterDefault />
+            <HeaderAccount />
+            <div class="account-container">                
+                <aside class="account-sidebar"> 
+                    Сайдбар 
+                </aside>
+                <div class="account-content">
+                    <div>
+                        <Nuxt />
+                    </div>
+                    <FooterAccount />
+                </div>
+            </div>  
         </div>
     </div>
 </template>
 
 <script>
 import HeaderAccount from '~/components/header-account/header-account.vue'
-import FooterDefault from '~/components/footer/footer.vue'
+import FooterAccount from '~/components/footer-account/footer-account.vue'
 export default {
     name: 'AccountLayout',
     components: {
         HeaderAccount, 
-        FooterDefault
+        FooterAccount
     }
 }
 

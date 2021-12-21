@@ -1,4 +1,7 @@
 export default {
+  env: {
+    URL_IMAGES: process.env.URL_IMAGES
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Министерство Просвещения РФ',
@@ -33,6 +36,10 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/extension-axios' },
+
+    // filters
+    { src: '~/filters/date.filter.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -47,13 +54,50 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/auth-next'
   ],
+
+  auth: {
+    strategies: {
+      local: {
+        token: {
+          property: 'data.token',
+          global: true,
+          // required: true,
+          type: 'Bearer'
+        },
+        user: {
+          // property: 'user',
+          // autoFetch: true,
+          clientId: true,
+          scope: true
+        },
+        endpoints: {
+          login: { url: 'auth', method: 'post', propertyName: 'data.token' },
+          // logout: { url: '', method: 'post' },
+          user: false
+          // user: { url: 'auth', method: 'post', propertyName: 'data.token' }
+        }
+      }
+    },
+    redirect: {
+      user: '/subject',
+      login: '/login',
+      logout: '/',
+      callback: '/login',
+      home: '/subject'
+    }
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/'
+    baseURL: 'http://api.efs.demostorage.site/api/v1/'
+  },
+
+  router: {
+    middleware: ['auth']
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

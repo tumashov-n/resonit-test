@@ -1,0 +1,24 @@
+@import "~/static/css/_variables.scss";
+
+.partner{
+    margin-bottom: 220px;
+
+    &-list{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-item{
+        max-width: 170px;
+        margin-bottom: 38px;
+        
+        a{
+            display: block;
+
+            img{
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}

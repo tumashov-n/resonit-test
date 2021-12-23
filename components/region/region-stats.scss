@@ -1,0 +1,22 @@
+@import "~/static/css/_variables.scss";
+
+.region-stats{
+    margin-bottom: 100px;
+    &-item{
+        background: #fff;   
+        padding: 26px 20px;
+        text-align: center;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: #99A6B7;
+        border-radius: 8px;
+        font-family: $font-secondary;
+
+        span{
+            color: $color-secondary;
+            display: block;
+            font-weight: 500;
+            font-size: 40px;
+        }
+    }
+}

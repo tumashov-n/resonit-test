@@ -1,8 +1,8 @@
 <template>
     <header class="header-account">
-        <div class="header-account-logo">
+        <NuxtLink to="/" class="header-account-logo">
             <img src="~/static/img/logo-account.png" alt="Министерство Просвещения">
-        </div>
+        </NuxtLink>
         
         <a href="#" class="header-account-link">
             <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">

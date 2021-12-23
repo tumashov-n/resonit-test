@@ -1,23 +1,93 @@
 @import "~/static/css/_variables.scss";
 
 .map-home{
-    margin-bottom: 200px;
-
     &-select{
         width: 320px;
         margin: 0 auto 45px;
     }
+}
 
+.map-canvas{
+    position: relative;
+    margin-bottom: 180px;
     svg{
-        fill: #B5C2EA;
+        fill: #3D495E;
+        stroke: none;
     }
 
     path{
         transition: all .2s ease;
 
         &:hover{
-            fill: $color-primary;
+            stroke: $color-secondary;
             cursor: pointer;
         }
     }
+
+    a:hover path{
+        fill: #839ECE;
+        cursor: pointer;
+    }
+}
+
+.map-info-popup{
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.06);
+    position: absolute;
+    width: 310px; 
+    padding: 15px 25px 20px;
+    top: 60%;
+    left: 50%;
+
+    &-title{
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid $color-lightest;
+    }
+
+    &-content-title{
+        color: $color-light;
+    }
+
+    &-content-value{
+        padding-left: 12px;
+        color: $color-default;
+        font-size: 16px;
+        color: #000;
+    }
+
+    ul{
+        margin-bottom: 10px;
+        font-size: 14px;
+
+        li{
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+    }
+
+    a{
+        border-bottom: 1px solid;
+        color: $color-primary;
+        font-size: 14px;
+
+        &:hover{
+            border-color: transparent;
+        }
+    }
+}
+
+.map-info-popup::after {
+    content: '';
+    position: absolute;
+    background: url("~static/svg/map-pin.svg") no-repeat center center; 
+    width: 15px;
+    height: 20px;
+    top: -7px;
+    right: 30px;
 }

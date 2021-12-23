@@ -3,9 +3,7 @@
         <div class="page">
             <HeaderAccount />
             <div class="account-container">                
-                <aside class="account-sidebar"> 
-                    Сайдбар 
-                </aside>
+                <AccountSidebar />
                 <div class="account-content">
                     <div>
                         <Nuxt />
@@ -20,11 +18,13 @@
 <script>
 import HeaderAccount from '~/components/header-account/header-account.vue'
 import FooterAccount from '~/components/footer-account/footer-account.vue'
+import AccountSidebar from '~/components/account-sidebar/account-sidebar.vue'
 export default {
     name: 'AccountLayout',
     components: {
         HeaderAccount, 
-        FooterAccount
+        FooterAccount,
+        AccountSidebar
     }
 }
 

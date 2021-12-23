@@ -14,7 +14,9 @@
                 <a class="header-phone-link" href="tel:88005006070">8-800-500-60-70</a>
             </div>
             <div class="header-login">
-                <a href="#" class="btn btn--outline">Вход для педагогов</a>
+                <NuxtLink to="login" class="btn btn--outline">
+                    Вход для педагогов
+                </NuxtLink>
             </div>
         </div>
     </header>

@@ -4,8 +4,7 @@
             <div class="h1">
                 Новости
             </div>
-            <div class="news-list row">
-                
+            <div class="news-list row">     
                 <div v-for="item in GET_NEWS" :key="item.id" class="col-4 news-list-col">
                     <div class="news-list-item">
                         <a href="#" class="news-list-item-image">
@@ -23,10 +22,8 @@
                             {{ item.preview_text }}
                         </div>
                     </div>
-                </div>
-               
+                </div>    
             </div>
-
             <a href="#" class="btn">Посмотреть все новости</a>
         </div>
     </section>

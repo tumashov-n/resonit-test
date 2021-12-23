@@ -1,0 +1,93 @@
+@import "~/static/css/_variables.scss";
+
+.sidebar-content{
+    position: sticky;
+    top: 0;
+}
+.account-sidebar{
+    background: url(~static/svg/sidebar-bg.svg) no-repeat center center, #fff;
+    width: 120px;
+    position: relative;
+    z-index: 3;
+    transition: all .3s ease;
+    box-shadow: 4px 0 18px 0 rgba(0, 0, 0, 0.06);
+
+    &-toggle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+        
+        &:hover{
+            cursor: pointer;
+            color: $color-secondary;
+        }
+
+        svg{
+            transition: all .2s ease; 
+        }
+    }
+
+    &--toggled{
+        width: 50px;
+        .account-sidebar-menu li a svg{
+            margin-bottom: 0;
+        }
+        .account-sidebar-menu li a span{
+            transform: scale(0);
+            height: 0;
+        }
+        .account-sidebar-toggle svg{
+            transform: rotateY(180deg);
+        }
+    }
+
+    &-menu{
+        font-size: 12px;
+        font-weight: 500;
+
+        li{
+            a{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 15px 0;
+                position: relative;
+                
+                &:hover{
+                    color: $color-secondary;
+                }
+
+                &::after{
+                    content:'';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    background: $color-secondary;
+                    width: 4px;
+                    opacity: 0;
+                    transition: all .2s ease;
+                }
+
+                svg{
+                    margin-bottom: 5px;
+                }
+
+                span{
+                    transition: transform .2s ease, height .2s ease;
+                }
+
+                &.nuxt-link-active{
+                    background: #F7F7FA;
+                    color: $color-secondary;
+
+                    &::after{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

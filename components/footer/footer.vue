@@ -7,7 +7,9 @@
                     <li><a href="#">Регионы</a></li>
                     <li><a href="#">Техническая поддержка</a></li>
                 </ul>
-                <a href="#" class="btn btn--small btn--outline-inverse">Служебный раздел</a>
+                <NuxtLink to="login" class="btn btn--small btn--outline-inverse">
+                    Служебный раздел
+                </NuxtLink>
             </div>
             <div class="footer-info">
                 <div class="footer-info-logo">

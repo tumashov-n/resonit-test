@@ -37,10 +37,11 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/extension-axios' },
-
+    { src: '~/plugins/swiper.js', ssr: false },
     // filters
     { src: '~/filters/date.filter.js' }
   ],
+
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: false,
@@ -50,6 +51,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module'
   ],
+  
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -82,11 +84,11 @@ export default {
       }
     },
     redirect: {
-      user: '/subject',
+      user: '/map',
       login: '/login',
       logout: '/',
       callback: '/login',
-      home: '/subject'
+      home: '/map'
     }
   },
 
@@ -97,10 +99,12 @@ export default {
   },
 
   router: {
-    middleware: ['auth']
+    middleware: ['auth'],
+    linkExactActiveClass: 'active'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+
   }
 }

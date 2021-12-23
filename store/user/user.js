@@ -13,12 +13,12 @@ export const actions = {
 
 export const mutations = {
     SET_USER: (state, news) => {
-        state.news = news
+        state.user = user
     }
 }
 
 export const getters = {
     GET_USER(state) {
-        return state.news
+        return state.user
     }
 }

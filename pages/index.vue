@@ -1,8 +1,17 @@
 <template>
     <div>      
-        <Slide />
+        <client-only>
+            <Slide />
+        </client-only>
         
-        <Map />
+        <section class="map-home">
+            <div class="container">
+                <div class="h1 text-center">
+                    Информация по регионам
+                </div>
+                <Map />
+            </div>
+        </section>
 
         <section class="system">
             <div class="container">

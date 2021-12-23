@@ -15,8 +15,21 @@
                         </div>
                     </div>
                 </swiper-slide>
-                <div slot="pagination" class="swiper-pagination" />
             </swiper>
+            <div slot="navigation" class="swiper-navigation">
+                <div class="slide-nav slide-nav-prev">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M33.333 20L6.66636 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.667 30L6.66699 20L16.667 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="slide-nav slide-nav-next">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.66699 20H33.3336" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M23.333 10L33.333 20L23.333 30" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
         </div>
     </section>
 </template>

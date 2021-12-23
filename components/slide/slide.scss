@@ -4,6 +4,7 @@
     margin-bottom: 75px;
     width: 100%;
     display: block;
+    position: relative;
 
     &-slide{
 
@@ -38,5 +39,23 @@
                 max-width: 530px;
             }
         }
+    }
+}
+
+.slide-nav{
+    position: absolute;
+    z-index: 2;
+    top: calc(50% - 20px);
+
+    &-next{
+        right: 30px;
+    }
+    &-prev{
+        left: 30px;
+    }
+
+    &:hover{
+        cursor: pointer;
+        opacity: 0.5;
     }
 }

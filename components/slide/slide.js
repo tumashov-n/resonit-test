@@ -8,11 +8,16 @@ export default {
         urlImages : null,
         swiperOptions: {
             spaceBetween: 0,
-            speed: 1000,
+            speed: 500,
             effect: 'slide',
+            loop: true,
             autoplay: {
                 delay: 2500,
                 disableOnInteraction: false
+            },
+            navigation: {
+                nextEl: '.slide-nav-next',
+                prevEl: '.slide-nav-prev'
             }
         }
     }),

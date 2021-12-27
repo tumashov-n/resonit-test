@@ -85,3 +85,21 @@
         justify-content: flex-end;
     }
 }
+
+@media (max-width: $screen-tablet-portrait) {
+    .header-menu-btn,
+    .header-phone{
+        display: none;
+    }
+}
+
+@media (max-width: $screen-phone) {
+    .header .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-login{
+        justify-content: center;
+        margin-top: 20px;
+    }
+}

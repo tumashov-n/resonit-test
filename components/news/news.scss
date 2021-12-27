@@ -75,3 +75,21 @@
         }
     }
 }
+
+@media (max-width: $screen-tablet-landscape) {
+    .news {
+        margin-bottom: 110px;
+    }
+}
+
+@media (max-width: $screen-tablet-portrait) {
+    .news .news-list-col{
+        width: 50%;
+    }
+}
+
+@media (max-width: $screen-phone) {
+    .news .news-list-col {
+        width: 100%;
+    }
+}

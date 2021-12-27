@@ -24,7 +24,8 @@
         }
     }
 
-    a:hover path{
+    a:hover path,
+    a.active path{
         fill: #839ECE;
         cursor: pointer;
     }
@@ -39,6 +40,11 @@
     padding: 15px 25px 20px;
     top: 60%;
     left: 50%;
+    display: none;
+
+    &.active{
+        display: block;
+    }
 
     &-title{
         font-size: 16px;
@@ -90,4 +96,17 @@
     height: 20px;
     top: -7px;
     right: 30px;
+}
+
+@media (max-width: $screen-tablet-portrait) {
+    .map-canvas {
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width: $screen-phone) {
+    .map-info-popup {
+        top: 85%;
+        left: 2%;
+    }
 }

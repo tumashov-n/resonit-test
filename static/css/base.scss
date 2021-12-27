@@ -611,3 +611,24 @@ p{
         }
     }
 }
+
+@media (max-width: $screen-tablet-landscape) {
+    .system {
+        margin-bottom: 110px;
+
+        &-item{
+            width: calc(33.333% - 20px);
+        }
+    }
+}
+
+@media (max-width: $screen-phone) {
+    .system-item {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .system-list{
+        flex-wrap: wrap;
+        padding-top: 0;
+    }
+}
